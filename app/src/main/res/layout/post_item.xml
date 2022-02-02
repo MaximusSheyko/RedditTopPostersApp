@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/postitem_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/postitem_image"
+        android:layout_width="match_parent"
+        android:layout_height="100pt"
+        android:layout_below="@id/postitem_post"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/postitem_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postitem_image"
+        android:background="@color/purple_200"
+        android:text="author:"
+        android:textColor="#311B92" />
+
+    <TextView
+        android:id="@+id/postitem_data_posted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postitem_author"
+        android:text="posted:" />
+
+    <TextView
+        android:id="@+id/postitem_num_comments"
+        android:layout_below="@+id/postitem_data_posted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="number comments:" />
+
+    <Button
+        android:id="@+id/postitem_button_save_to_galary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postitem_num_comments"
+        android:text="save to galary" />
+
+
+</RelativeLayout>
