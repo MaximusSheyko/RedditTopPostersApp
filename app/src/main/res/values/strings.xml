@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RedditTopPostersApp</string>
+    <string name="time_posted">posted:</string>
+    <string name="constant_author">author:</string>
 </resources>

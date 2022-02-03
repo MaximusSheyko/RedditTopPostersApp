@@ -1,55 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="5dp"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/postitem_post"
+        android:id="@+id/post_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Title"
-        android:textAlignment="center"
-        android:textSize="20dp" />
+        android:text="That be title"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:visibility="visible" />
 
     <ImageView
-        android:id="@+id/postitem_image"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="100pt"
-        android:layout_below="@id/postitem_post"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="TODO"
-        android:src="@drawable/ic_launcher_foreground" />
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
 
-    <TextView
-        android:id="@+id/postitem_author"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/postitem_image"
-        android:background="@color/purple_200"
-        android:text="author:"
-        android:textColor="#311B92" />
-
-    <TextView
-        android:id="@+id/postitem_data_posted"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/postitem_author"
-        android:text="posted:" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/postitem_num_comments"
-        android:layout_below="@+id/postitem_data_posted"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/post_constant_author"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/constant_author"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/post_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="this must by username" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="number comments:" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/postitem_button_save_to_galary"
+        <TextView
+            android:id="@+id/post_constant_time_posted"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginStart="10dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/time_posted" />
+
+        <TextView
+            android:id="@+id/post_time_posted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x hours ago" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/postitem_num_comments"
-        android:text="save to galary" />
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/comments_icon_foreground"
+            />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/post_num_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="number comments"
+            android:gravity="fill_vertical"
+            />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/post_save_to_gallery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        app:srcCompat="@drawable/buttom_save_to_gallery_foreground" />
+</LinearLayout>
