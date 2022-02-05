@@ -2,4 +2,7 @@
     <string name="app_name">RedditTopPostersApp</string>
     <string name="time_posted">posted:</string>
     <string name="constant_author">author:</string>
+    <string name="post_button_save_image">save image</string>
+    <string name="post_button_prev">prev</string>
+    <string name="post_button_next">next</string>
 </resources>

@@ -9,14 +9,13 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RedditController {
 
-    final static String URL = "http://www.reddit.com/";
-
     public static RedditApi getApi(){
         var gson = new GsonBuilder().setLenient().create();
         var retrofit = new Retrofit.Builder()
-                .baseUrl(URL)
-                .addConverterFactory(ScalarsConverterFactory.create())
+                .baseUrl(UrlConstant.REDDIT.getURL())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         return  retrofit.create(RedditApi.class);
     }
 }
+
