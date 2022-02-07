@@ -1,5 +1,6 @@
 package com.example.reddittoppostersapp.util;
 
+import android.content.Intent;
 import android.icu.number.NumberFormatter;
 import android.os.Build;
 import android.util.Log;
@@ -16,17 +17,21 @@ import java.time.ZoneId;
 
 public class DateUtil {
 
-    public LocalDateTime getLocalDateTimeFromUtcSec(Long utcSec){
+    public static LocalDateTime getLocalDateTimeFromUtcSec(Long utcSec){
         return LocalDateTime.ofInstant(Instant.ofEpochSecond(utcSec), ZoneId.systemDefault());
     }
 
-    public LocalDateTime getLocalDateTimeFromUtcSec(String utcSec){
+    public static LocalDateTime getLocalDateTimeFromUtcSec(String utcSec){
         var secInLong = new BigDecimal(utcSec).longValue();
         return getLocalDateTimeFromUtcSec(secInLong);
     }
 
-    public Duration getElapsedTimeFromDate(String ustSec){
+    public static Duration getElapsedTimeFromDate(String ustSec){
         var current = LocalDateTime.now();
         return Duration.between(getLocalDateTimeFromUtcSec(ustSec), current);
+    }
+
+    public static long countElapsedTimeFromDateInHours(String utcSec){
+        return getElapsedTimeFromDate(utcSec).toHours();
     }
 }

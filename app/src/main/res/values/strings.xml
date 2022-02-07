@@ -5,4 +5,5 @@
     <string name="post_button_save_image">save image</string>
     <string name="post_button_prev">prev</string>
     <string name="post_button_next">next</string>
+    <string name="fullscreen_save">save</string>
 </resources>

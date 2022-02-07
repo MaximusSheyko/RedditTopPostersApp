@@ -13,6 +13,10 @@ public interface RedditApi {
     @NonNull
     Call<Listing> postsTop(@Query("limit") int numberPost,
                            @Query("count") int numberPostOnPage,
-                           @Query("after") String nextPageId,
-                           @Query("before") String prevPageId);
+                           @Query("after") String nextPageId);
+
+    @GET("/top.json")
+    @NonNull
+    Call<Listing> postsTop(@Query("limit") int numberPost,
+                           @Query("count") int numberPostOnPage);
 }
