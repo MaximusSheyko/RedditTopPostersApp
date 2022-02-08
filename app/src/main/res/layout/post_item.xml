@@ -17,7 +17,7 @@
         android:id="@+id/post_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="That be title"
+        android:text="@string/that_be_title"
         android:layout_marginHorizontal="10dp"
         android:textSize="16sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="this must by username" />
+            android:text="@string/this_must_by_username" />
 
     </LinearLayout>
 
@@ -88,7 +88,7 @@
             android:id="@+id/post_time_posted"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="x hours ago" />
+            android:text="@string/x_hours_ago" />
     </LinearLayout>
 
     <LinearLayout
@@ -108,8 +108,8 @@
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_weight="2"
-            android:text="number comments"
-            android:textSize="15dp"
+            android:text="@string/number_comments"
+            android:textSize="15sp"
             android:gravity="fill_vertical"
             />
 

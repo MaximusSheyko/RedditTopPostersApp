@@ -6,4 +6,10 @@
     <string name="post_button_prev">prev</string>
     <string name="post_button_next">next</string>
     <string name="fullscreen_save">save</string>
+    <string name="that_be_title">That be title</string>
+    <string name="that_be_title">That be title</string>
+    <string name="this_must_by_username">this must by username</string>
+    <string name="x_hours_ago">x hours ago</string>
+    <string name="number_comments">number comments</string>
+    <string name="go">GO</string>
 </resources>
