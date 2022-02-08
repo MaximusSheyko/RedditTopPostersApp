@@ -110,5 +110,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(inState);
         nextPageId = inState.getString(SAVE_PAGE_KEY);
         posts.addAll(inState.getParcelableArrayList(SAVE_POSTS_KEY));
+        findViewById(R.id.main_start).setVisibility(posts.isEmpty() ? View.VISIBLE : View.INVISIBLE);
+        findViewById(R.id.post_load_new_posts).setVisibility(posts.isEmpty() ? View.INVISIBLE : View.VISIBLE);
     }
 }
